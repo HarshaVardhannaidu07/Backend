@@ -7,7 +7,11 @@ const applicationRoutes = require('./routes/applications');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'backend.railway.internal', // Your frontend URL
+  credentials: true // Enable cookies/auth if needed
+}));
+
 app.use(express.json());
 
 // Database connection
