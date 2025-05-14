@@ -8,10 +8,7 @@ const app = express();
 
 app.use(express.json());
 // Middleware
-app.use(cors({
-  origin: '*', // Allow all (replace with frontend URL later)
-  methods: ['GET', 'POST'] // Explicitly allow POST
-}));
+app.use(cors({ origin: "https://form-production-7787.up.railway.app/" }));
 
 
 
