@@ -6,13 +6,14 @@ const applicationRoutes = require('./routes/applications');
 
 const app = express();
 
+app.use(express.json());
 // Middleware
 app.use(cors({
-  origin: 'form-production-7787.up.railway.app', // Your frontend URL
-  credentials: true // Enable cookies/auth if needed
+  origin: '*', // Allow all (replace with frontend URL later)
+  methods: ['GET', 'POST'] // Explicitly allow POST
 }));
 
-app.use(express.json());
+
 
 // Database connection
 mongoose.connect(process.env.MONGO_URL)
