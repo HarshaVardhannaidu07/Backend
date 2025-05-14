@@ -8,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'backend.railway.internal', // Your frontend URL
+  origin: 'form-production-7787.up.railway.app', // Your frontend URL
   credentials: true // Enable cookies/auth if needed
 }));
 
