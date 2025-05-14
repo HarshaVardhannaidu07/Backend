@@ -6,14 +6,12 @@ const applicationRoutes = require('./routes/applications');
 
 const app = express();
 
-app.use(express.json());
 // Middleware
-app.use(cors({ origin: "https://form-production-7787.up.railway.app/" }));
-
-
+app.use(cors());
+app.use(express.json());
 
 // Database connection
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
