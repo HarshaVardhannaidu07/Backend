@@ -33,7 +33,8 @@ Ensure you have the following installed:
    `yarn install`
 
 3. **Create a .env.local file in the root directory**
-   MONGODBURL=your_mongo_url_here
+   
+   `MONGODBURL=your_mongo_url_here`
 
    
 4. **Start the server:**
