@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -7,11 +8,7 @@ const applicationRoutes = require('./routes/applications');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: 'https://form-production-9aae.up.railway.app/',
-  methods: ['GET', 'POST'],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 // Database connection
