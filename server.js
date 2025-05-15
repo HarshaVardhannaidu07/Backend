@@ -8,7 +8,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'form.railway.internal',
+  origin: 'https://form-production-9aae.up.railway.app/',
   methods: ['GET', 'POST'],
   credentials: true
 }));
